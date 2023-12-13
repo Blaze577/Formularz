@@ -1,0 +1,15 @@
+1 CREATE TABLE dane_uzytkownika (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    imie VARCHAR(30) NOT NULL,
+    nazwisko VARCHAR(30) NOT NULL,
+    data_urodzenia DATE NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    telefon VARCHAR(15) NOT NULL,
+    wojewodztwo VARCHAR(50) NOT NULL,
+    plec VARCHAR(10) NOT NULL,
+    zgoda_newsletter TINYINT(1) NOT NULL
+
+2 CREATE TABLE wojewodztwa (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nazwa VARCHAR(255) NOT NULL
+);

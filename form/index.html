@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz rejestracyjny</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1>Formularz rejestracyjny</h1>
+
+    <form id="registrationForm" action="baza.php" method="post">
+        <div class="form-group">
+            <label for="imie">Imię:</label>
+            <input type="text" class="form-control" id="imie" name="imie" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nazwisko">Nazwisko:</label>
+            <input type="text" class="form-control" id="nazwisko" name="nazwisko" required>
+        </div>
+
+        <div class="form-group">
+            <label for="data-urodzenia">Data urodzenia:</label>
+            <input type="date" class="form-control" id="data-urodzenia" name="data-urodzenia" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Adres email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefon">Telefon:</label>
+            <input type="tel" class="form-control" id="telefon" name="telefon" required>
+        </div>
+
+        <div class="form-group">
+            <label for="wojewodztwo">Województwo:</label>
+            <select class="form-control" id="wojewodztwo" name="wojewodztwo" required>
+                <option value="Zachodniopomorskie">Zachodniopomorskie</option>
+                <option value="Pomorskie">Pomorskie</option>
+                <option value="Warmińsko-Mazurskie">Warmińsko-Mazurskie</option>
+                <option value="Lubuskie">Lubuskie</option>
+                <option value="Wielkopolskie">Wielkopolskie</option>
+                <option value="Kujawsko-Pomorskie">Kujawsko-Pomorskie</option>
+                <option value="Mazowieckie">Mazowieckie</option>
+                <option value="Podlaskie">Podlaskie</option>
+                <option value="Dolnośląskie">Dolnośląskie</option>
+                <option value="Łódzkie">Łódzkie</option>
+                <option value="Lubelskie">Lubelskie</option>
+                <option value="Opolskie">Opolskie</option>
+                <option value="Śląskie">Śląskie</option>
+                <option value="Świętokrzyskie">Świętokrzyskie</option>
+                <option value="Małopolskie">Małopolskie</option>
+                <option value="Podkarpackie">Podkarpackie</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Płeć:</label><br>
+            <input type="radio" id="plec-m" name="plec" value="Mężczyzna" required>
+            <label for="plec-m">Mężczyzna</label>
+            <input type="radio" id="plec-k" name="plec" value="Kobieta" required>
+            <label for="plec-k">Kobieta</label>
+        </div>
+
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="zgoda" name="zgoda" required>
+            <label class="form-check-label" for="zgoda">Zgoda na newsletter</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Wyślij</button>
+    </form>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#registrationForm').validate();
+    });
+</script>
+
+</body>
+</html>
